@@ -1,5 +1,15 @@
-const Home = () => {
-  return <main className='h-screen w-full flex items-center justify-center'>Hola mundo</main>;
-};
+import Hero from "@/components/home/hero";
+import Features from "@/components/home/features";
+import Products from "@/components/home/products";
+import Footer from "@/components/footer";
 
-export default Home;
+export default function Home() {
+  return (
+    <div>
+      <Hero />
+      <Features />
+      <Products />
+      
+    </div>
+  );
+}
