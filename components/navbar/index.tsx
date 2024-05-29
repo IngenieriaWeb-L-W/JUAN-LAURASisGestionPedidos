@@ -1,4 +1,6 @@
+/* eslint-disable import/no-default-export */
 import React from 'react'
+import Link from 'next/link'
 
 const Index = () => {
   return (
@@ -7,8 +9,11 @@ const Index = () => {
         <div className="container px-6 py-4 mx-auto">
             <div className="lg:flex lg:items-center lg:justify-between">
                 <div className="flex items-center justify-between">
-                    <a href="#" className="mx-auto ">
-                        <img className="w-auto h-6 sm:h-7" src="https://merakiui.com/images/full-logo.svg" alt=""/>
+                    <a href="#" >
+                        <img 
+                        className="w-auto h-6 sm:h-7" 
+                        src="https://merakiui.com/images/full-logo.svg" 
+                        alt=""/>
                     </a>
                     <div className="flex lg:hidden">
                        <button type="button" 
@@ -39,10 +44,12 @@ const Index = () => {
                 </div>
                 <div className="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white shadow-md lg:bg-transparent lg:dark:bg-transparent lg:shadow-none dark:bg-gray-900 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:w-auto lg:opacity-100 lg:translate-x-0">
                     <div className="-mx-4 lg:flex lg:items-center">
-                        <a href="#" className="block mx-4 text-gray-700 capitalize dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Web developers</a>
-                        <a href="#" className="block mx-4 mt-4 text-gray-700 capitalize lg:mt-0 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Web Designers</a>
-                        <a href="#" className="block mx-4 mt-4 text-gray-700 capitalize lg:mt-0 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">UI/UX Designers</a>
-                        <a href="#" className="block mx-4 mt-4 text-gray-700 capitalize lg:mt-0 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+                        <Link href="/product/details" className="block mx-4 text-gray-700 capitalize dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Products</Link>
+                        <Link href="/contact" className="block mx-4 mt-4 text-gray-700 capitalize lg:mt-0 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Contact</Link>
+                        <Link href="#" 
+                        className="block mx-4 mt-4 text-gray-700 capitalize lg:mt-0 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">UI/UX Designers</Link>
+                        <Link href="#" 
+                        className="block mx-4 mt-4 text-gray-700 capitalize lg:mt-0 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Contact</Link>
                     </div>
                 </div>
             </div>

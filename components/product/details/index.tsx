@@ -2,6 +2,7 @@
 import React from 'react'
 
 const Index = () => {
+
   return (
     <div>
         <section className="text-gray-600 body-font overflow-hiddenbg-white shadow dark:bg-gray-900">
