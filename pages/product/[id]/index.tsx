@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { useAtom } from "jotai";
 import { productsAtom } from "@/atoms/cart";
 import axios from "axios";
-//import { productType } from '@types/global';
 import { productType } from "@/types/global";
 import { PrismaClient } from "@prisma/client";
 
@@ -15,7 +14,7 @@ export async function getServerSideProps(context: any) {
   };
 }
 
-const Index = ({ id }: {id: string }) => {
+const Index = ({ id }: { id: string }) => {
   const [products] = useAtom(productsAtom);
   const [productDetails, setProductDetails] = useState<productType>({
     id: "0",
@@ -27,10 +26,14 @@ const Index = ({ id }: {id: string }) => {
     },
     image: "",
     price: 0,
-    category: "",
+    category: {
+      name: "",
+      description: "",
+      id: "",
+    },
   });
 
-  const getProduct = async (id: number) => {
+  const getProduct = async (id: string) => {
     try {
       const response = await axios.get(
         `https://fakestoreapi.com/products/${id}`

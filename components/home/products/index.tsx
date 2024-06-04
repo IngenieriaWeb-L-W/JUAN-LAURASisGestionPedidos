@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Card from "./card";
 import { useAtom } from "jotai";
-// import { productsAtom } from '@/atoms/cart';
-//import { useQuery } from '@apollo/client';
-//import { GET_PRODUCTS } from '@/utils/graphql/queries/products';
+//import { productsAtom } from '@/atoms/cart';
+import { useQuery } from '@apollo/client';
+
+import { GET_PRODUCTS } from "@/utils/graphql/queries/products";
 
 type product = {
   id: number;
@@ -22,10 +23,10 @@ const Index = () => {
   const [products, setProducts] = useState<product[]>([]);
   const { loading } = useQuery(GET_PRODUCTS, {
     variables: {
-      take: 10,
+      take: 10, //cantidad de product
       skip: 0,
     },
-    fetchPolicy: "cache-and-network",
+    fetchPolicy: "cache-and-network", //toma de datos de product
     onCompleted: (data) => {
       setProducts(data.products);
       console.log("data :>> ", data);
