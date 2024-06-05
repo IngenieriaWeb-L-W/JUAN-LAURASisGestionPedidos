@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useQuery } from "@apollo/client";
-import { GET_PRODUCTS } from "@/utils/graphql/queries/products";
-import { productType } from "@/types/global";
+import { GET_PRODUCTS } from "@/utils/queries/products";
+import { productType } from "@/types";
 import TR from "@/components/admin/tr";
 
 import { useRouter } from "next/router";

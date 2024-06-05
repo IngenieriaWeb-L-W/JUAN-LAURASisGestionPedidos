@@ -1,4 +1,17 @@
-import React, { useState } from "react";
+import Contact from '@/components/contact';
+import React from 'react';
+
+const Index = () => {
+  return (
+    <div>
+      <Contact />
+    </div>
+  );
+};
+
+export default Index;
+
+/* import React, { useState } from "react";
 import Link from "next/link";
 
 
@@ -171,4 +184,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Index; */

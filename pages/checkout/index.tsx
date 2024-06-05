@@ -1,6 +1,6 @@
 import React from 'react';
-import Checkout from '@/components/product/checkout';
-
+//import Checkout from '@/components/product/checkout';
+import Checkout from '@/components/productdetails/checkout';
 const Index = () => {
   return (
     <div>

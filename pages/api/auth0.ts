@@ -9,11 +9,13 @@ const Auth0 = async (req: any, res: any) => {
         if (session) {
            let userData 
            try{
-            const {access_token:accessToken, token_type:tokenType} = await getAuth0Token().then((res) => res);
-            data.connestion = 'Username-Password-Authenticated';
+            const {access_token:accessToken, token_type:tokenType} = await getAuth0Token().then(
+                (resToken) => resToken
+            );
+            data.connection = 'Username-Password-Authenticated';
             userData = await createUserAuth0(data, accessToken, tokenType).then((res) => res);
         } catch (error) {
-            res.status(500).json({message: `Error ${error}`});
+            req.status(500).json({message: `Error ${error}`}); //res.status
         } 
         if (!Object.keys(userData).includes('statusCode')){
             return res.status(200).json({usuario: userData});

@@ -1,5 +1,5 @@
 import React from "react";
-import { productType } from "@/types/global";
+import { productType } from "@/types";
 
 interface IndexProps {
   product: productType;

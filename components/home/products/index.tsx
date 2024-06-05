@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Card from "./card";
 import { useAtom } from "jotai";
 //import { productsAtom } from '@/atoms/cart';
-import { useQuery } from '@apollo/client';
+import { useQuery } from "@apollo/client";
 
-import { GET_PRODUCTS } from "@/utils/graphql/queries/products";
+import { GET_PRODUCTS } from "@/utils/queries/products";
 
 type product = {
   id: number;
