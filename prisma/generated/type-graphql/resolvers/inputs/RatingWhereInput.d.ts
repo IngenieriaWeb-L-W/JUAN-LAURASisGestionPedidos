@@ -10,8 +10,8 @@ export declare class RatingWhereInput {
     id?: StringFilter | undefined;
     rate?: FloatFilter | undefined;
     count?: IntFilter | undefined;
+    productId?: StringFilter | undefined;
     createdAt?: DateTimeFilter | undefined;
     updatedAt?: DateTimeFilter | undefined;
-    productId?: StringFilter | undefined;
     product?: ProductRelationFilter | undefined;
 }

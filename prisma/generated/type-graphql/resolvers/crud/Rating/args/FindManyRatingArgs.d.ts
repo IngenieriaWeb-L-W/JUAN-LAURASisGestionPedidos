@@ -7,5 +7,5 @@ export declare class FindManyRatingArgs {
     cursor?: RatingWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;
-    distinct?: Array<"id" | "rate" | "count" | "createdAt" | "updatedAt" | "productId"> | undefined;
+    distinct?: Array<"id" | "rate" | "count" | "productId" | "createdAt" | "updatedAt"> | undefined;
 }

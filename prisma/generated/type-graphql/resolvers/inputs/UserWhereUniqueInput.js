@@ -6,6 +6,7 @@ const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AccountListRelationFilter_1 = require("../inputs/AccountListRelationFilter");
 const DateTimeFilter_1 = require("../inputs/DateTimeFilter");
 const DateTimeNullableFilter_1 = require("../inputs/DateTimeNullableFilter");
+const EnumRoleFilter_1 = require("../inputs/EnumRoleFilter");
 const SessionListRelationFilter_1 = require("../inputs/SessionListRelationFilter");
 const StringNullableFilter_1 = require("../inputs/StringNullableFilter");
 const UserWhereInput_1 = require("../inputs/UserWhereInput");
@@ -60,6 +61,12 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", StringNullableFilter_1.StringNullableFilter)
 ], UserWhereUniqueInput.prototype, "image", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => EnumRoleFilter_1.EnumRoleFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", EnumRoleFilter_1.EnumRoleFilter)
+], UserWhereUniqueInput.prototype, "role", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => DateTimeFilter_1.DateTimeFilter, {
         nullable: true

@@ -4,7 +4,7 @@ import { RatingWhereInput } from "../../../inputs/RatingWhereInput";
 export declare class GroupByRatingArgs {
     where?: RatingWhereInput | undefined;
     orderBy?: RatingOrderByWithAggregationInput[] | undefined;
-    by: Array<"id" | "rate" | "count" | "createdAt" | "updatedAt" | "productId">;
+    by: Array<"id" | "rate" | "count" | "productId" | "createdAt" | "updatedAt">;
     having?: RatingScalarWhereWithAggregatesInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;

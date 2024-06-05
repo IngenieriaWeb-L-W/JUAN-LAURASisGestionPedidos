@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserMaxAggregate = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
+const Role_1 = require("../../enums/Role");
 let UserMaxAggregate = class UserMaxAggregate {
 };
 exports.UserMaxAggregate = UserMaxAggregate;
@@ -36,6 +37,12 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], UserMaxAggregate.prototype, "image", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => Role_1.Role, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], UserMaxAggregate.prototype, "role", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => Date, {
         nullable: true

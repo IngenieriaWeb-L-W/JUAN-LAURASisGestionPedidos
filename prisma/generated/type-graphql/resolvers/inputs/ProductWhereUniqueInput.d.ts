@@ -13,9 +13,9 @@ export declare class ProductWhereUniqueInput {
     description?: StringFilter | undefined;
     price?: FloatFilter | undefined;
     image?: StringFilter | undefined;
+    categoryId?: StringFilter | undefined;
     createdAt?: DateTimeFilter | undefined;
     updatedAt?: DateTimeFilter | undefined;
-    categoryId?: StringFilter | undefined;
     rating?: RatingNullableRelationFilter | undefined;
     category?: CategoryRelationFilter | undefined;
 }

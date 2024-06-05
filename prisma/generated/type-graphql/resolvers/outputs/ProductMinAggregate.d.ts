@@ -4,7 +4,7 @@ export declare class ProductMinAggregate {
     description: string | null;
     price: number | null;
     image: string | null;
+    categoryId: string | null;
     createdAt: Date | null;
     updatedAt: Date | null;
-    categoryId: string | null;
 }

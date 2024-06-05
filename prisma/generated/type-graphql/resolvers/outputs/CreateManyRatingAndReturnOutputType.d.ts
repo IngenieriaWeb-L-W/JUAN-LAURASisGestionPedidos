@@ -3,8 +3,8 @@ export declare class CreateManyRatingAndReturnOutputType {
     id: string;
     rate: number;
     count: number;
+    productId: string;
     createdAt: Date;
     updatedAt: Date;
-    productId: string;
     product: Product;
 }

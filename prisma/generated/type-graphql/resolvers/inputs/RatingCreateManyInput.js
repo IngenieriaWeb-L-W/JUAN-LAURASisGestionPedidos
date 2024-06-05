@@ -25,6 +25,12 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", Number)
 ], RatingCreateManyInput.prototype, "count", void 0);
 tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: false
+    }),
+    tslib_1.__metadata("design:type", String)
+], RatingCreateManyInput.prototype, "productId", void 0);
+tslib_1.__decorate([
     TypeGraphQL.Field(_type => Date, {
         nullable: true
     }),
@@ -36,12 +42,6 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", Date)
 ], RatingCreateManyInput.prototype, "updatedAt", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: false
-    }),
-    tslib_1.__metadata("design:type", String)
-], RatingCreateManyInput.prototype, "productId", void 0);
 exports.RatingCreateManyInput = RatingCreateManyInput = tslib_1.__decorate([
     TypeGraphQL.InputType("RatingCreateManyInput", {})
 ], RatingCreateManyInput);

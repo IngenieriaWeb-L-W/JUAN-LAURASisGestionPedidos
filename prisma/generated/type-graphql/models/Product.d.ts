@@ -7,8 +7,8 @@ export declare class Product {
     price: number;
     image: string;
     rating?: Rating | null;
-    createdAt: Date;
-    updatedAt: Date;
     category?: Category;
     categoryId: string;
+    createdAt: Date;
+    updatedAt: Date;
 }

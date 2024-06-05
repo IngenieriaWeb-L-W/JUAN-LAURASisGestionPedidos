@@ -6,10 +6,10 @@ import * as outputTypes from "./resolvers/outputs";
 import * as inputTypes from "./resolvers/inputs";
 export type MethodDecoratorOverrideFn = (decorators: MethodDecorator[]) => MethodDecorator[];
 declare const crudResolversMap: {
-    User: typeof crudResolvers.UserCrudResolver;
     Product: typeof crudResolvers.ProductCrudResolver;
-    Rating: typeof crudResolvers.RatingCrudResolver;
     Category: typeof crudResolvers.CategoryCrudResolver;
+    Rating: typeof crudResolvers.RatingCrudResolver;
+    User: typeof crudResolvers.UserCrudResolver;
     Account: typeof crudResolvers.AccountCrudResolver;
     Session: typeof crudResolvers.SessionCrudResolver;
     VerificationToken: typeof crudResolvers.VerificationTokenCrudResolver;
@@ -37,10 +37,10 @@ export type ArgsTypesEnhanceMap = {
 };
 export declare function applyArgsTypesEnhanceMap(argsTypesEnhanceMap: ArgsTypesEnhanceMap): void;
 declare const relationResolversMap: {
-    User: typeof relationResolvers.UserRelationsResolver;
     Product: typeof relationResolvers.ProductRelationsResolver;
-    Rating: typeof relationResolvers.RatingRelationsResolver;
     Category: typeof relationResolvers.CategoryRelationsResolver;
+    Rating: typeof relationResolvers.RatingRelationsResolver;
+    User: typeof relationResolvers.UserRelationsResolver;
     Account: typeof relationResolvers.AccountRelationsResolver;
     Session: typeof relationResolvers.SessionRelationsResolver;
 };

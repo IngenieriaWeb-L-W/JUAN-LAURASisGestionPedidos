@@ -47,6 +47,12 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", IntWithAggregatesFilter_1.IntWithAggregatesFilter)
 ], RatingScalarWhereWithAggregatesInput.prototype, "count", void 0);
 tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringWithAggregatesFilter_1.StringWithAggregatesFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringWithAggregatesFilter_1.StringWithAggregatesFilter)
+], RatingScalarWhereWithAggregatesInput.prototype, "productId", void 0);
+tslib_1.__decorate([
     TypeGraphQL.Field(_type => DateTimeWithAggregatesFilter_1.DateTimeWithAggregatesFilter, {
         nullable: true
     }),
@@ -58,12 +64,6 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", DateTimeWithAggregatesFilter_1.DateTimeWithAggregatesFilter)
 ], RatingScalarWhereWithAggregatesInput.prototype, "updatedAt", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => StringWithAggregatesFilter_1.StringWithAggregatesFilter, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", StringWithAggregatesFilter_1.StringWithAggregatesFilter)
-], RatingScalarWhereWithAggregatesInput.prototype, "productId", void 0);
 exports.RatingScalarWhereWithAggregatesInput = RatingScalarWhereWithAggregatesInput = tslib_1.__decorate([
     TypeGraphQL.InputType("RatingScalarWhereWithAggregatesInput", {})
 ], RatingScalarWhereWithAggregatesInput);

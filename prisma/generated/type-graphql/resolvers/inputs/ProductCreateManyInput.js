@@ -37,6 +37,12 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], ProductCreateManyInput.prototype, "image", void 0);
 tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: false
+    }),
+    tslib_1.__metadata("design:type", String)
+], ProductCreateManyInput.prototype, "categoryId", void 0);
+tslib_1.__decorate([
     TypeGraphQL.Field(_type => Date, {
         nullable: true
     }),
@@ -48,12 +54,6 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", Date)
 ], ProductCreateManyInput.prototype, "updatedAt", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: false
-    }),
-    tslib_1.__metadata("design:type", String)
-], ProductCreateManyInput.prototype, "categoryId", void 0);
 exports.ProductCreateManyInput = ProductCreateManyInput = tslib_1.__decorate([
     TypeGraphQL.InputType("ProductCreateManyInput", {})
 ], ProductCreateManyInput);

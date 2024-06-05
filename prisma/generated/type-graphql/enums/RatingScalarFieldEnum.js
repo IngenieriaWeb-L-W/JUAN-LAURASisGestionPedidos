@@ -8,9 +8,9 @@ var RatingScalarFieldEnum;
     RatingScalarFieldEnum["id"] = "id";
     RatingScalarFieldEnum["rate"] = "rate";
     RatingScalarFieldEnum["count"] = "count";
+    RatingScalarFieldEnum["productId"] = "productId";
     RatingScalarFieldEnum["createdAt"] = "createdAt";
     RatingScalarFieldEnum["updatedAt"] = "updatedAt";
-    RatingScalarFieldEnum["productId"] = "productId";
 })(RatingScalarFieldEnum || (exports.RatingScalarFieldEnum = RatingScalarFieldEnum = {}));
 TypeGraphQL.registerEnumType(RatingScalarFieldEnum, {
     name: "RatingScalarFieldEnum",

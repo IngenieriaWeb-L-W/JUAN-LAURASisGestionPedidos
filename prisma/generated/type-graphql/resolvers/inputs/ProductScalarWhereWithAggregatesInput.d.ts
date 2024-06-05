@@ -10,7 +10,7 @@ export declare class ProductScalarWhereWithAggregatesInput {
     description?: StringWithAggregatesFilter | undefined;
     price?: FloatWithAggregatesFilter | undefined;
     image?: StringWithAggregatesFilter | undefined;
+    categoryId?: StringWithAggregatesFilter | undefined;
     createdAt?: DateTimeWithAggregatesFilter | undefined;
     updatedAt?: DateTimeWithAggregatesFilter | undefined;
-    categoryId?: StringWithAggregatesFilter | undefined;
 }

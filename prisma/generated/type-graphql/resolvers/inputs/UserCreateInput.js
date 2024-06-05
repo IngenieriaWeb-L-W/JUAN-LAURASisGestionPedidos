@@ -5,6 +5,7 @@ const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AccountCreateNestedManyWithoutUserInput_1 = require("../inputs/AccountCreateNestedManyWithoutUserInput");
 const SessionCreateNestedManyWithoutUserInput_1 = require("../inputs/SessionCreateNestedManyWithoutUserInput");
+const Role_1 = require("../../enums/Role");
 let UserCreateInput = class UserCreateInput {
 };
 exports.UserCreateInput = UserCreateInput;
@@ -38,6 +39,12 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], UserCreateInput.prototype, "image", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => Role_1.Role, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], UserCreateInput.prototype, "role", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => Date, {
         nullable: true

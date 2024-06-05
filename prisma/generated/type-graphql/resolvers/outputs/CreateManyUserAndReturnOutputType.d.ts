@@ -4,6 +4,7 @@ export declare class CreateManyUserAndReturnOutputType {
     email: string;
     emailVerified: Date | null;
     image: string | null;
+    role: "USER" | "ADMIN";
     createdAt: Date;
     updatedAt: Date;
 }

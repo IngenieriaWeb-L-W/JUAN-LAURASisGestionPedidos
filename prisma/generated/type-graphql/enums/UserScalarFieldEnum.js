@@ -10,6 +10,7 @@ var UserScalarFieldEnum;
     UserScalarFieldEnum["email"] = "email";
     UserScalarFieldEnum["emailVerified"] = "emailVerified";
     UserScalarFieldEnum["image"] = "image";
+    UserScalarFieldEnum["role"] = "role";
     UserScalarFieldEnum["createdAt"] = "createdAt";
     UserScalarFieldEnum["updatedAt"] = "updatedAt";
 })(UserScalarFieldEnum || (exports.UserScalarFieldEnum = UserScalarFieldEnum = {}));

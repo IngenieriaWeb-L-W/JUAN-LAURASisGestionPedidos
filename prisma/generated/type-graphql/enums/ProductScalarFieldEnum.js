@@ -10,9 +10,9 @@ var ProductScalarFieldEnum;
     ProductScalarFieldEnum["description"] = "description";
     ProductScalarFieldEnum["price"] = "price";
     ProductScalarFieldEnum["image"] = "image";
+    ProductScalarFieldEnum["categoryId"] = "categoryId";
     ProductScalarFieldEnum["createdAt"] = "createdAt";
     ProductScalarFieldEnum["updatedAt"] = "updatedAt";
-    ProductScalarFieldEnum["categoryId"] = "categoryId";
 })(ProductScalarFieldEnum || (exports.ProductScalarFieldEnum = ProductScalarFieldEnum = {}));
 TypeGraphQL.registerEnumType(ProductScalarFieldEnum, {
     name: "ProductScalarFieldEnum",

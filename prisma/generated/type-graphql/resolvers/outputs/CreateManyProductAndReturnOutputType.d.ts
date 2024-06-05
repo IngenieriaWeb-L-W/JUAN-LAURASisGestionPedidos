@@ -5,8 +5,8 @@ export declare class CreateManyProductAndReturnOutputType {
     description: string;
     price: number;
     image: string;
+    categoryId: string;
     createdAt: Date;
     updatedAt: Date;
-    categoryId: string;
     category: Category;
 }

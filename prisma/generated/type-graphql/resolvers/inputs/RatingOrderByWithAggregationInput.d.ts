@@ -7,9 +7,9 @@ export declare class RatingOrderByWithAggregationInput {
     id?: "asc" | "desc" | undefined;
     rate?: "asc" | "desc" | undefined;
     count?: "asc" | "desc" | undefined;
+    productId?: "asc" | "desc" | undefined;
     createdAt?: "asc" | "desc" | undefined;
     updatedAt?: "asc" | "desc" | undefined;
-    productId?: "asc" | "desc" | undefined;
     _count?: RatingCountOrderByAggregateInput | undefined;
     _avg?: RatingAvgOrderByAggregateInput | undefined;
     _max?: RatingMaxOrderByAggregateInput | undefined;

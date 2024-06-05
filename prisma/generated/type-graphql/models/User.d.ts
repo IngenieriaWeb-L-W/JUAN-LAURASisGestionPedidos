@@ -7,6 +7,7 @@ export declare class User {
     email: string;
     emailVerified?: Date | null;
     image?: string | null;
+    role: "USER" | "ADMIN";
     accounts?: Account[];
     sessions?: Session[];
     createdAt: Date;

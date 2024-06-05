@@ -61,6 +61,12 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", StringFilter_1.StringFilter)
 ], ProductWhereUniqueInput.prototype, "image", void 0);
 tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringFilter_1.StringFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringFilter_1.StringFilter)
+], ProductWhereUniqueInput.prototype, "categoryId", void 0);
+tslib_1.__decorate([
     TypeGraphQL.Field(_type => DateTimeFilter_1.DateTimeFilter, {
         nullable: true
     }),
@@ -72,12 +78,6 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", DateTimeFilter_1.DateTimeFilter)
 ], ProductWhereUniqueInput.prototype, "updatedAt", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => StringFilter_1.StringFilter, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", StringFilter_1.StringFilter)
-], ProductWhereUniqueInput.prototype, "categoryId", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => RatingNullableRelationFilter_1.RatingNullableRelationFilter, {
         nullable: true

@@ -7,9 +7,9 @@ export declare class RatingGroupBy {
     id: string;
     rate: number;
     count: number;
+    productId: string;
     createdAt: Date;
     updatedAt: Date;
-    productId: string;
     _count: RatingCountAggregate | null;
     _avg: RatingAvgAggregate | null;
     _sum: RatingSumAggregate | null;

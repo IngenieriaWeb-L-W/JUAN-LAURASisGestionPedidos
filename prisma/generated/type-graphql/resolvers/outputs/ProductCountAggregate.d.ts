@@ -4,8 +4,8 @@ export declare class ProductCountAggregate {
     description: number;
     price: number;
     image: number;
+    categoryId: number;
     createdAt: number;
     updatedAt: number;
-    categoryId: number;
     _all: number;
 }

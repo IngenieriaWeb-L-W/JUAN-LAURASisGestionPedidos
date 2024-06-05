@@ -58,6 +58,12 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", StringWithAggregatesFilter_1.StringWithAggregatesFilter)
 ], ProductScalarWhereWithAggregatesInput.prototype, "image", void 0);
 tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringWithAggregatesFilter_1.StringWithAggregatesFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringWithAggregatesFilter_1.StringWithAggregatesFilter)
+], ProductScalarWhereWithAggregatesInput.prototype, "categoryId", void 0);
+tslib_1.__decorate([
     TypeGraphQL.Field(_type => DateTimeWithAggregatesFilter_1.DateTimeWithAggregatesFilter, {
         nullable: true
     }),
@@ -69,12 +75,6 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", DateTimeWithAggregatesFilter_1.DateTimeWithAggregatesFilter)
 ], ProductScalarWhereWithAggregatesInput.prototype, "updatedAt", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => StringWithAggregatesFilter_1.StringWithAggregatesFilter, {
-        nullable: true
-    }),
-    tslib_1.__metadata("design:type", StringWithAggregatesFilter_1.StringWithAggregatesFilter)
-], ProductScalarWhereWithAggregatesInput.prototype, "categoryId", void 0);
 exports.ProductScalarWhereWithAggregatesInput = ProductScalarWhereWithAggregatesInput = tslib_1.__decorate([
     TypeGraphQL.InputType("ProductScalarWhereWithAggregatesInput", {})
 ], ProductScalarWhereWithAggregatesInput);

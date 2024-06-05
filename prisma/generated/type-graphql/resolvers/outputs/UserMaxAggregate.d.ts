@@ -4,6 +4,7 @@ export declare class UserMaxAggregate {
     email: string | null;
     emailVerified: Date | null;
     image: string | null;
+    role: "USER" | "ADMIN" | null;
     createdAt: Date | null;
     updatedAt: Date | null;
 }

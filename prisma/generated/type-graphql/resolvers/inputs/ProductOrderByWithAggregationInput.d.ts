@@ -9,9 +9,9 @@ export declare class ProductOrderByWithAggregationInput {
     description?: "asc" | "desc" | undefined;
     price?: "asc" | "desc" | undefined;
     image?: "asc" | "desc" | undefined;
+    categoryId?: "asc" | "desc" | undefined;
     createdAt?: "asc" | "desc" | undefined;
     updatedAt?: "asc" | "desc" | undefined;
-    categoryId?: "asc" | "desc" | undefined;
     _count?: ProductCountOrderByAggregateInput | undefined;
     _avg?: ProductAvgOrderByAggregateInput | undefined;
     _max?: ProductMaxOrderByAggregateInput | undefined;

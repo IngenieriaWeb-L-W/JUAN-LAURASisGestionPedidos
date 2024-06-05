@@ -30,6 +30,12 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", Number)
 ], RatingGroupBy.prototype, "count", void 0);
 tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: false
+    }),
+    tslib_1.__metadata("design:type", String)
+], RatingGroupBy.prototype, "productId", void 0);
+tslib_1.__decorate([
     TypeGraphQL.Field(_type => Date, {
         nullable: false
     }),
@@ -41,12 +47,6 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", Date)
 ], RatingGroupBy.prototype, "updatedAt", void 0);
-tslib_1.__decorate([
-    TypeGraphQL.Field(_type => String, {
-        nullable: false
-    }),
-    tslib_1.__metadata("design:type", String)
-], RatingGroupBy.prototype, "productId", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => RatingCountAggregate_1.RatingCountAggregate, {
         nullable: true

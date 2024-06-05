@@ -9,7 +9,7 @@ export declare class RatingScalarWhereWithAggregatesInput {
     id?: StringWithAggregatesFilter | undefined;
     rate?: FloatWithAggregatesFilter | undefined;
     count?: IntWithAggregatesFilter | undefined;
+    productId?: StringWithAggregatesFilter | undefined;
     createdAt?: DateTimeWithAggregatesFilter | undefined;
     updatedAt?: DateTimeWithAggregatesFilter | undefined;
-    productId?: StringWithAggregatesFilter | undefined;
 }

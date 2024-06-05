@@ -9,9 +9,9 @@ export declare class ProductGroupBy {
     description: string;
     price: number;
     image: string;
+    categoryId: string;
     createdAt: Date;
     updatedAt: Date;
-    categoryId: string;
     _count: ProductCountAggregate | null;
     _avg: ProductAvgAggregate | null;
     _sum: ProductSumAggregate | null;

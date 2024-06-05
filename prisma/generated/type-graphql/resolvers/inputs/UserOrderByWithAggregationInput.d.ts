@@ -8,6 +8,7 @@ export declare class UserOrderByWithAggregationInput {
     email?: "asc" | "desc" | undefined;
     emailVerified?: SortOrderInput | undefined;
     image?: SortOrderInput | undefined;
+    role?: "asc" | "desc" | undefined;
     createdAt?: "asc" | "desc" | undefined;
     updatedAt?: "asc" | "desc" | undefined;
     _count?: UserCountOrderByAggregateInput | undefined;
