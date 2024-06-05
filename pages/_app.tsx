@@ -17,15 +17,15 @@ export default function App({ Component, pageProps: { session, ...pageProps } }:
             <Component {...pageProps} />
           </Layout>
           <ToastContainer
-            position='top-right'
-            autoClose={5000}
+            position='top-center'
+            autoClose={4000}
             hideProgressBar={false}
             newestOnTop
             closeOnClick
             pauseOnFocusLoss
             draggable
             pauseOnHover
-            theme='dark'
+            theme='colored'
           />
         </Provider>
       </SessionProvider>
