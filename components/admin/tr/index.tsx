@@ -1,20 +1,42 @@
 import React from "react";
 import { productType } from "@/types/global";
 import { useRouter } from "next/router";
+import { useMutation } from "@apollo/client";
+import { DELETE_PRODUCT } from "@/utils/graphql/mutations/products";
+import Modal from "@/components/admin/modal";
+import {toast} from "react-toastify";
 
 interface Props {
   product: productType;
 }
-
 const Index = ({ product }: Props) => {
   const router = useRouter();
+  const [deleteProduct,{loading}]= useMutation(DELETE_PRODUCT);
+  const [open, setOpen]=React.useState(false);
+  const handleClose=()=>setOpen(false);
+  const handleSubmit= async (id: any) => {
+    await deleteProduct({
+      variables: {
+        id,
+      },
+    }).then(()=>{
+      toast.success("Producto eliminado con éxito");
+      router.reload();
+      setOpen(false);
+      
+    }
+    ).catch((e)=>{
+      toast.error("Error al eliminar el producto");
+      console.error(e);
+      setOpen(false);
+    });
+    
+  };
   return (
     <tr>
       <td className="px-4 py-4 text-sm font-medium whitespace-nowrap">
         <div>
-          <h2 className="font-medium text-gray-800 dark:text-white ">
-            {product.title}
-          </h2>
+          <h2 className="font-medium text-gray-800 dark:text-white ">{product.title}</h2>
         </div>
       </td>
       <td className="px-12 py-4 text-sm font-medium whitespace-nowrap">
@@ -24,9 +46,7 @@ const Index = ({ product }: Props) => {
       </td>
       <td className="px-4 py-4 text-sm max-w-96 ">
         <div>
-          <p className="text-gray-500 dark:text-gray-400">
-            {product.description}
-          </p>
+          <p className="text-gray-500 dark:text-gray-400">{product.description}</p>
         </div>
       </td>
       <td className="px-4 py-4 text-sm whitespace-nowrap">
@@ -65,8 +85,28 @@ const Index = ({ product }: Props) => {
             />
           </svg>
         </button>
+        <button 
+          onClick={()=>{
+            setOpen(true);
+          }}
+          className="flex items-center justify-center px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 transform bg-blue-600 border border-transparent rounded-md active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
+        >  
+          <i className="iconfy w-10 h-10 text-white" data-icon="material-symbols:auto-delete"/>
+          
+          
+        </button>
       </td>
+      <Modal
+        open={open}
+        setOpen={setOpen}
+        handleClose={handleClose}
+        handleSubmit={() =>{
+          handleSubmit(product.id)
+        }}
+        loading={loading}
+      />
     </tr>
+    
   );
 };
 

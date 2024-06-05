@@ -3,6 +3,7 @@ import { useQuery } from "@apollo/client";
 import { GET_PRODUCTS } from "@/utils/graphql/queries/products";
 import { productType } from "@/types/global";
 import TR from "@/components/admin/tr";
+
 import { useRouter } from "next/router";
 
 const Index = ({ countProducts = 0 }) => {

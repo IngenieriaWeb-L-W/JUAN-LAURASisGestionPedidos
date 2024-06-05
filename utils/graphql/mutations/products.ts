@@ -24,3 +24,11 @@ export const UPSERT_PRODUCT = gql`
     }
   }
 `;
+
+export const DELETE_PRODUCT = gql`
+  mutation Mutation($where: ProductWhereUniqueInput!){
+    deleteOneProduct(where: $where){
+      id
+    }
+  }
+  `;
