@@ -11,6 +11,7 @@ import { toast } from "react-toastify";
 import { productType } from "@/types/global";
 import Loading from "@/components/Loading";
 
+
 export async function getServerSideProps(cxt: any) {
   return {
     props: {
