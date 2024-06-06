@@ -41,7 +41,7 @@ var CategoryMaxAggregate_1 = require("./CategoryMaxAggregate");
 Object.defineProperty(exports, "CategoryMaxAggregate", { enumerable: true, get: function () { return CategoryMaxAggregate_1.CategoryMaxAggregate; } });
 var CategoryMinAggregate_1 = require("./CategoryMinAggregate");
 Object.defineProperty(exports, "CategoryMinAggregate", { enumerable: true, get: function () { return CategoryMinAggregate_1.CategoryMinAggregate; } });
-var CreateManyAccountAndReturnOutputType_1 = require("./CreateManyAccountAndReturnOutputType");
+/* var CreateManyAccountAndReturnOutputType_1 = require("./CreateManyAccountAndReturnOutputType");
 Object.defineProperty(exports, "CreateManyAccountAndReturnOutputType", { enumerable: true, get: function () { return CreateManyAccountAndReturnOutputType_1.CreateManyAccountAndReturnOutputType; } });
 var CreateManyCategoryAndReturnOutputType_1 = require("./CreateManyCategoryAndReturnOutputType");
 Object.defineProperty(exports, "CreateManyCategoryAndReturnOutputType", { enumerable: true, get: function () { return CreateManyCategoryAndReturnOutputType_1.CreateManyCategoryAndReturnOutputType; } });
@@ -55,7 +55,7 @@ var CreateManyUserAndReturnOutputType_1 = require("./CreateManyUserAndReturnOutp
 Object.defineProperty(exports, "CreateManyUserAndReturnOutputType", { enumerable: true, get: function () { return CreateManyUserAndReturnOutputType_1.CreateManyUserAndReturnOutputType; } });
 var CreateManyVerificationTokenAndReturnOutputType_1 = require("./CreateManyVerificationTokenAndReturnOutputType");
 Object.defineProperty(exports, "CreateManyVerificationTokenAndReturnOutputType", { enumerable: true, get: function () { return CreateManyVerificationTokenAndReturnOutputType_1.CreateManyVerificationTokenAndReturnOutputType; } });
-var ProductAvgAggregate_1 = require("./ProductAvgAggregate");
+var ProductAvgAggregate_1 = require("./ProductAvgAggregate"); */
 Object.defineProperty(exports, "ProductAvgAggregate", { enumerable: true, get: function () { return ProductAvgAggregate_1.ProductAvgAggregate; } });
 var ProductCountAggregate_1 = require("./ProductCountAggregate");
 Object.defineProperty(exports, "ProductCountAggregate", { enumerable: true, get: function () { return ProductCountAggregate_1.ProductCountAggregate; } });
