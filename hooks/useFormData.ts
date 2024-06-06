@@ -1,18 +1,4 @@
-const Product = {
-  Mutation: {},
-  Query: {
-    products: async (_parent: any, args: any) => {
-      return 'products';
-    },
-    product: async (_parent: any, args: any) => {
-      return 'product';
-    },
-  },
-};
-
-export default { Product };
-
-/* import { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 
 const useFormData = (initial: any) => {
   const form = useRef(initial);
@@ -45,4 +31,21 @@ const useFormData = (initial: any) => {
   return { form, formData, updateFormData, resetFormData } as const;
 };
 
-export default useFormData; */
+export default useFormData;
+
+
+
+
+/* const Product = {
+  Mutation: {},
+  Query: {
+    products: async (_parent: any, args: any) => {
+      return 'products';
+    },
+    product: async (_parent: any, args: any) => {
+      return 'product';
+    },
+  },
+};
+
+export default { Product }; */

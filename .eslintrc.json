@@ -1,4 +1,8 @@
 {
+  "extends": "next/core-web-vitals"
+}
+
+/* {
   "parser": "@typescript-eslint/parser",
   "extends": [
     "eslint:recommended",
@@ -53,12 +57,13 @@
     ]
   },
   "overrides": [
-    {
-      "files": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
+    { */
+    /*  "files": [copiar lo que va ac'a de develop], //TODO
       "excludedFiles": "pages/**",
       "rules": {
         "import/no-default-export": "error"
       }
     }
   ]
-}
+} */
+ 

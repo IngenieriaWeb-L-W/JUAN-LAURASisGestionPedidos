@@ -1,5 +1,5 @@
 import { getServerSession } from "next-auth";
-import { options } from "@/pages/api/auth/[...nexauth]";
+import { options } from "@/pages/api/auth/[...nextauth]";
 import { createUserAuth0, getAuth0Token } from "@/utils/api";
 
 const Auth0 = async (req: any, res: any) => {

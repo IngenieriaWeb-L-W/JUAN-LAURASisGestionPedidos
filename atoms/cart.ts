@@ -1,6 +1,8 @@
 import { atom } from 'jotai';
 
- /* const productos = [
+const products = [
+
+
    {
      id: 1,
      name: 'Pasa montanas',
@@ -44,6 +46,7 @@ import { atom } from 'jotai';
      image: 'https://via.placeholder.com/150',
      price: 1400,
    },
- ]; */
+ ]; 
 
-export const productsAtom = atom([]);
+ export const productsAtom = atom(products);
+ export const cartAtom = atom([]);

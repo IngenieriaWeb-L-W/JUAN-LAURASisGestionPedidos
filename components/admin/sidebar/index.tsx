@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Index = () => {
+//const Index = () => {
+  const Index = ({ children }: any) => {
   return (
     <div>
       <aside className='flex flex-col w-64 h-screen px-4 py-8 overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700'>
@@ -130,6 +131,8 @@ const Index = () => {
           </nav>
         </div>
       </aside>
+      {/* se adiociona de rama jpa */}
+      <div className='flex justify-center items-center w-full'>{children}</div> 
     </div>
   );
 };
