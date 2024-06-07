@@ -26,13 +26,13 @@ const GET_PRODUCTS = gql`
     }
   }
 `;
-
-const GET_PRODUCT_BY_ID = gql`
+const GET_PRODUCT = gql`
   query Product($where: ProductWhereUniqueInput!) {
     product(where: $where) {
       title
       rating {
         rate
+        id
         count
       }
       price
@@ -41,13 +41,13 @@ const GET_PRODUCT_BY_ID = gql`
       description
       category {
         name
-        description
         id
+        description
       }
     }
   }
 `;
-export { GET_PRODUCTS, GET_PRODUCT_BY_ID };
+export { GET_PRODUCTS, GET_PRODUCT };
 
 /* import { gql } from '@apollo/client';
 
@@ -77,13 +77,13 @@ const GET_PRODUCTS = gql`
     }
   }
 `;
-const GET_PRODUCT = gql`
+
+const GET_PRODUCT_BY_ID = gql`
   query Product($where: ProductWhereUniqueInput!) {
     product(where: $where) {
       title
       rating {
         rate
-        id
         count
       }
       price
@@ -92,10 +92,11 @@ const GET_PRODUCT = gql`
       description
       category {
         name
-        id
         description
+        id
       }
     }
   }
 `;
-export { GET_PRODUCTS, GET_PRODUCT }; */
+export { GET_PRODUCTS, GET_PRODUCT_BY_ID }; */
+

@@ -9,7 +9,7 @@ const Index = () => {
   const { form, formData, updateFormData } = useFormData({});
 
   const handleSubmit = (e: any) => {
-    e.preventDefault();
+    e.preventDefault(); // prevent erased event
     console.log(formData);
   };
 

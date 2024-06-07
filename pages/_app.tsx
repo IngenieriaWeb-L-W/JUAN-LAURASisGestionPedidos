@@ -5,7 +5,6 @@ import { client } from '@/graphql/client';
 import Layout from '@/components/Layout';
 import { Provider } from 'jotai';
 import { SessionProvider } from 'next-auth/react';
-import { ToastProvider } from '@/context/useToast';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 

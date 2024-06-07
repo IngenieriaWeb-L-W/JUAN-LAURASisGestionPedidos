@@ -1057,6 +1057,11 @@
     "@types/prop-types" "*"
     csstype "^3.0.2"
 
+"@types/safe-json-stringify@^1.1.5":
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/@types/safe-json-stringify/-/safe-json-stringify-1.1.5.tgz#f20a6945e638868c49a25486d0afa31e37e0177e"
+  integrity sha512-wQ1unJoajjDOP7bkg7FHOYelVp6BSsuBIFSvifNKeiMHegXWa6vddoqM/dHTVkX8bn9fJcor4Hukff9AtFybcA==
+
 "@types/semver@^7.5.6":
   version "7.5.8"
   resolved "https://registry.npmjs.org/@types/semver/-/semver-7.5.8.tgz"

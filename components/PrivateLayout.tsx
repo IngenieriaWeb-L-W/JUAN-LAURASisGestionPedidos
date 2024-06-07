@@ -1,20 +1,4 @@
 import React from 'react';
-import SideBar from '@/components/admin/sidebar';
-import PrivateRoute from "@/components/PrivateRoute" 
-
-const PrivateLayout = ({ children }: any) => {
-  return (
-    <div>
-      <PrivateRoute>
-        <SideBar>{children}</SideBar>
-      </PrivateRoute>
-    </div>
-  );
-};
-
-export default PrivateLayout;
-
-/* import React from 'react';
 import { useSession, signIn } from 'next-auth/react';
 
 const PrivateLayout = ({ children }: any) => {
@@ -27,7 +11,33 @@ const PrivateLayout = ({ children }: any) => {
     signIn('auth0');
     return <div>Redirecting...</div>;
   }
-  return <div>{children}</div>;
+  return (
+  <div>
+    {children}
+    </div>
+  );
+};
+
+export default PrivateLayout;
+
+/* import React from 'react';
+import SideBar from '@/components/admin/sidebar';
+import PrivateRoute from "@/components/PrivateRoute" 
+
+const PrivateLayout = ({ children }: any) => {
+  return (
+
+    //lo cambiamos escondiendo el sidebar por ahora
+    <div>
+      <PrivateRoute>
+          <SideBar>   
+          {children}
+          </SideBar>  
+      </PrivateRoute>
+    </div>
+  );
 };
 
 export default PrivateLayout; */
+
+ 
