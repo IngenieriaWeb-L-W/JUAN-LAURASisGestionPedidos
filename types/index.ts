@@ -1,5 +1,5 @@
 export type ProductType = {
-  id: number;
+  id: string;
   title: string;
   description: string;
   image: string;
@@ -14,7 +14,7 @@ export type ProductType = {
 type category = {
   name: string;
   description: string;
-  id: number;
+  id: string;
 };
 
 /* export type productType = {

@@ -67,8 +67,8 @@ const Index = ({ product }: IndexProps) => {
           className="px-1 py-1  text-white transition-colors duration-200 rounded-lg dark:text-gray-300 hover:bg-gray-100"
         >
           <i
-            className="iconify w-10 h-10 text-white"
-            data-icon="material-symbols:edit-square-outline"
+            className="iconify w-7 h-7 text-white"
+            data-icon="mdi:tooltip-edit-outline"
           />
         </button>
         <button
@@ -78,8 +78,9 @@ const Index = ({ product }: IndexProps) => {
           className="px-1 py-1  text-white transition-colors duration-200 rounded-lg dark:text-gray-300 hover:bg-gray-100"
         >
           <i
-            className="iconify w-10 h-10 text-white"
-            data-icon="material-symbols:delete-outline"
+            className="iconify w-7 h-7 text-white"
+            data-icon="icon-park-twotone:delete-five"
+            //data-icon="material-symbols:delete-outline"
           />
         </button>
       </td>

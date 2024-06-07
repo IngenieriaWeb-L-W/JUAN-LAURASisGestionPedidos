@@ -9,9 +9,9 @@ const Index = ({ countProducts = 0 }) => {
   const [products, setProducts] = useState<ProductType[]>([]);
   const [search, setSearch] = useState("");
   const [auxSearch, setAuxSearch] = useState("");
-  const [skip, setSkip] = useState(0);
+  const [skip, setSkip] = useState(0); //cunatos productos vamos a saltar
   const [page, setPage] = useState(1);
-  const PageRelation = 3;
+  const PageRelation = 3; //number of elements per page
   const router = useRouter();
   const { loading } = useQuery(GET_PRODUCTS, {
     variables: {
@@ -23,7 +23,7 @@ const Index = ({ countProducts = 0 }) => {
           {
             title: {
               contains: search,
-              mode: "insensitive",
+              mode: "insensitive", //don't care about capital letters
             },
           },
           {
@@ -50,11 +50,11 @@ const Index = ({ countProducts = 0 }) => {
           <div>
             <div className="flex items-center gap-x-3">
               <h2 className="text-lg font-medium text-gray-800 dark:text-white">
-                Customers
+                Listado de productos
               </h2>
 
               <span className="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full dark:bg-gray-800 dark:text-blue-400">
-                {countProducts} Products
+                {countProducts} Referencias
               </span>
             </div>
           </div>
@@ -108,7 +108,7 @@ const Index = ({ countProducts = 0 }) => {
                 />
               </svg>
 
-              <span> Add Product</span>
+              <span> Nuevo producto</span>
             </button>
           </div>
         </div>
@@ -158,7 +158,7 @@ const Index = ({ countProducts = 0 }) => {
                         className="py-3.5 px-4 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
                       >
                         <button className="flex items-center gap-x-3 focus:outline-none">
-                          <span>Title</span>
+                          <span>Artículo</span>
 
                           <svg
                             className="h-3"
@@ -192,21 +192,21 @@ const Index = ({ countProducts = 0 }) => {
                         scope="col"
                         className="px-12 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
                       >
-                        Category
+                        Categoría
                       </th>
 
                       <th
                         scope="col"
                         className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
                       >
-                        Description
+                        Descripción
                       </th>
 
                       <th
                         scope="col"
                         className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
                       >
-                        Image
+                        Imagen
                       </th>
 
                       <th
@@ -234,7 +234,7 @@ const Index = ({ countProducts = 0 }) => {
 
         <div className="mt-6 sm:flex sm:items-center sm:justify-between ">
           <div className="text-sm text-gray-500 dark:text-gray-400">
-            Page{" "}
+            Página {" "}
             <span className="font-medium text-gray-700 dark:text-gray-100">
               {" "}
               {page} of {Math.ceil(countProducts / PageRelation)}
@@ -276,7 +276,7 @@ const Index = ({ countProducts = 0 }) => {
               }}
               className="flex items-center justify-center w-1/2 px-5 py-2 text-sm text-gray-700 capitalize transition-colors duration-200 bg-white border rounded-md sm:w-auto gap-x-2 hover:bg-gray-100 dark:bg-gray-900 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800"
             >
-              <span>Next</span>
+              <span>Siguiente</span>
 
               <svg
                 xmlns="http://www.w3.org/2000/svg"
