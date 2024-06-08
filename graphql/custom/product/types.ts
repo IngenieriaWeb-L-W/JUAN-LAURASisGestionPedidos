@@ -12,6 +12,7 @@ const Product = gql`
     categoryId: String
     createdAt: Date
     createdAt: Date
+    quantity: Float
   }
   type Rating {
     id: String

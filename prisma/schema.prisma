@@ -26,6 +26,7 @@ model Product {
   price       Float
   image       String
   rating      Rating?
+  quantity    Float
   category    Category @relation(fields: [categoryId], references: [id])
   categoryId  String
   createdAt   DateTime @default(now())

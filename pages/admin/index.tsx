@@ -17,7 +17,7 @@ const Index = ({ countProducts = 0 }) => {
   return (
     <div>
       <PrivateLayout>
-        {/* <Sidebar /> */}
+         {/* <Sidebar />  */}
         <Table countProducts={countProducts} />
       </PrivateLayout>
     </div>

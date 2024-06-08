@@ -23,6 +23,7 @@ const GET_PRODUCTS = gql`
         rate
         count
       }
+      quantity
     }
   }
 `;
@@ -44,6 +45,7 @@ const GET_PRODUCT = gql`
         id
         description
       }
+      quantity
     }
   }
 `;

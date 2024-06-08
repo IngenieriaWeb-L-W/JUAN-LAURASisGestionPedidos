@@ -9,6 +9,7 @@ export type ProductType = {
     rate: number;
     count: number;
   };
+  quantity: number;
 };
 
 type category = {

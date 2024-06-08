@@ -20,6 +20,7 @@ const Index = ({ id }: { id: string }) => {
     description: "",
     category: { name: "", description: "", id: "" },
     rating: { rate: 0, count: 0 },
+    quantity: 0,
   });
 
   const [getProduct] = useQuery(GET_PRODUCT,

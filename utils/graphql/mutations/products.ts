@@ -12,6 +12,7 @@ export const UPSERT_PRODUCT = gql`
       title
       price
       image
+      quantity
     }
   }
 `;

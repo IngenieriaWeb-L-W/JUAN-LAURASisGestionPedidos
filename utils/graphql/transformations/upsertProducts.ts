@@ -3,6 +3,7 @@ interface IFormdata {
   price: string;
   description: string;
   image: string;
+  quantity: string;
 }
 interface ICategory {
   value: string;
@@ -15,13 +16,14 @@ interface Iprops {
 }
 
 const upsertProductsTransformation = ({ formdata, category }: Iprops) => {
-  const { title, price, description, image } = formdata;
+  const { title, price, description, image, quantity } = formdata;
 
   const dataCreate = {
     title: title,
     price: parseFloat(price),
     description: description,
     image: image,
+    quantity: parseFloat(quantity),
     category: {
       connect: {
         id: category?.value,
@@ -40,6 +42,9 @@ const upsertProductsTransformation = ({ formdata, category }: Iprops) => {
     },
     image: {
       set: image,
+    },
+    quantity: {
+      set: parseFloat(quantity),
     },
     category: {
       connect: {
