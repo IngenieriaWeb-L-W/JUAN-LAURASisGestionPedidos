@@ -1,3 +1,5 @@
+//Para usar desde el cliente
+
 import { getServerSession } from "next-auth";
 import { options } from "@/pages/api/auth/[...nextauth]";
 import { createUserAuth0, getAuth0Token } from "@/utils/api";
@@ -14,9 +16,9 @@ const Auth0 = async (req: any, res: any) => {
             );
             data.connection = 'Username-Password-Authenticated';
             userData = await createUserAuth0(data, accessToken, tokenType).then((res) => res);
-        } catch (error) {
-            req.status(500).json({message: `Error ${error}`}); //res.status
-        } 
+            } catch (error) {
+                req.status(500).json({message: `Error ${error}`}); //res.status
+            } 
         if (!Object.keys(userData).includes('statusCode')){
             return res.status(200).json({usuario: userData});
         }

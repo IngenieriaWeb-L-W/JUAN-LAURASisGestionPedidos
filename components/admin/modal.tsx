@@ -49,21 +49,21 @@ export default function BasicModal({
           <div>
             {loading ? (
               <Loading />
-            ) : (
+              ) : (
               <div>
                 <button
                   type="button"
                   className="px-8 mx-5 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600"
                   onClick={() => handleSubmit()}
                 >
-                  Delete
+                  Borrar
                 </button>
                 <button
                   type="button"
                   className="px-8 mx-5 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600"
                   onClick={() => setOpen(false)}
                 >
-                  Cancel
+                  Cancelar
                 </button>
               </div>
             )}
