@@ -67,11 +67,11 @@ const Index = ({ product }: IndexProps) => {
         </div>
       </td>
 
-      <td className="px-4 py-4 text-sm whitespace-nowrap">
-        <div className="w-48 h-1.5 bg-blue-200 overflow-hidden rounded-full">
+       <td className="px-4 py-4 text-sm whitespace-nowrap">
+        <div className="w-20 h-1.5 bg-blue-200 overflow-hidden rounded-full">
           <div className="bg-blue-500 w-2/3 h-1.5"></div>
         </div>
-      </td>
+      </td> 
 
       <td className="px-4 py-4 text-sm whitespace-nowrap">
         <button

@@ -3,13 +3,13 @@ export type ProductType = {
   title: string;
   description: string;
   image: string;
-  price: number;
+  price: number| null;
   category: category;
   rating: {
     rate: number;
     count: number;
   };
-  quantity: number;
+  quantity: number | null;
 };
 
 type category = {

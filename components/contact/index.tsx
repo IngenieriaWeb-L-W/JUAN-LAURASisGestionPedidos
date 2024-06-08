@@ -1,3 +1,4 @@
+import router from 'next/router';
 import React from 'react';
 
 const Index = () => {
@@ -19,13 +20,12 @@ const Index = () => {
                 </h1>
 
                 <p className='max-w-xl mt-6'>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem quo aliquid
-                  molestiae hic incidunt beatae placeat accusantium! Alias ex quisquam ab tempora.
-                  Ratione autem doloremque ducimus numquam doloribus, error sed.
+                Nuestra tienda siempre quiere brindarte un mejor servicio, no dudes en contactarnos si tienes alguna sugerencia 
+                o requieres que consigamos alguno de nuestros productos agotados en tu talla y preferencias.
                 </p>
 
-                <button className='px-8 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50'>
-                  get in touch
+                <button onClick={() => router.push("product/")} className='px-8 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50'>
+                  Tienda
                 </button>
 
                 <div className='mt-6 md:mt-8'>
@@ -108,11 +108,11 @@ const Index = () => {
               <div className='mt-8 lg:w-1/2 lg:mx-6'>
                 <div className='w-full px-8 py-10 mx-auto overflow-hidden bg-white shadow-2xl rounded-xl dark:bg-gray-900 lg:max-w-xl'>
                   <h1 className='text-xl font-medium text-gray-700 dark:text-gray-200'>
-                    Contact form
+                    Formulario de contacto
                   </h1>
 
                   <p className='mt-2 text-gray-500 dark:text-gray-400'>
-                    Ask us everything and we would love to hear from you
+                    Nos encantaría saber de ti
                   </p>
 
                   <form className='mt-6'>
@@ -121,12 +121,12 @@ const Index = () => {
                         htmlFor='name'
                         className='block mb-2 text-sm text-gray-600 dark:text-gray-200'
                       >
-                        Full Name
+                        Nomre
                       </label>
                       <input
                         id='name'
                         type='text'
-                        placeholder='John Doe'
+                        placeholder='nombres y apellidos'
                         className='block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring'
                       />
                     </div>
@@ -136,12 +136,12 @@ const Index = () => {
                         htmlFor='email'
                         className='block mb-2 text-sm text-gray-600 dark:text-gray-200'
                       >
-                        Email address
+                        Email 
                       </label>
                       <input
                         id='email'
                         type='email'
-                        placeholder='johndoe@example.com'
+                        placeholder='tucorreo@example.com'
                         className='block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring'
                       />
                     </div>
@@ -151,17 +151,17 @@ const Index = () => {
                         htmlFor='message'
                         className='block mb-2 text-sm text-gray-600 dark:text-gray-200'
                       >
-                        Message
+                        Mensaje
                       </label>
                       <textarea
                         id='message'
                         className='block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-48 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring'
-                        placeholder='Message'
+                        placeholder='Escríbenos acá'
                       ></textarea>
                     </div>
 
                     <button className='w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50'>
-                      get in touch
+                      Enviar mensaje
                     </button>
                   </form>
                 </div>

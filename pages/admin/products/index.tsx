@@ -16,6 +16,7 @@ const Index = ({ countProducts }: any) => {
   return (
     <div className='bg-gray-800'>
       <PrivateLayout>
+        {/* <Sidebar />  */}
         <Table countProducts={countProducts} />
       </PrivateLayout>
     </div>

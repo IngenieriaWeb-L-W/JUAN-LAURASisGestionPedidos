@@ -73,13 +73,13 @@ const Index = () => {
                   href='/product'
                   className='block mx-4 text-gray-700 capitalize dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400'
                 >
-                  Products
+                  Productos
                 </Link>
                 <Link
                   href='/contact'
                   className='block mx-4 mt-4 text-gray-700 capitalize lg:mt-0 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400'
                 >
-                  Contact
+                  Contacto
                 </Link>
                 <a
                   onClick={() => router.push(`/product/${id}`)}
