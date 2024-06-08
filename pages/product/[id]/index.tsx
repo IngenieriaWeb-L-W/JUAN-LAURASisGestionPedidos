@@ -1,41 +1,60 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { ProductType } from "@/types/index";
-import { PrismaClient } from "@prisma/client";
-import { GET_PRODUCTS } from "@/utils/graphql/queries/products";
-import { GET_PRODUCT } from "@/utils/graphql/queries/products";
-//import { useLazyQuery } from '@apollo/client';
 import { useQuery, useMutation, useLazyQuery } from "@apollo/client";
+import { GET_PRODUCT } from "@/utils/graphql/queries/products";
+import { GET_CATEGORIES } from "@/utils/graphql/queries/categories";
+import useFormData from "@/hooks/useFormData";
 import { useRouter } from "next/router";
-import Loading from "@/components/Loading";
 import { toast } from "react-toastify";
-import { DELETE_PRODUCT } from "@/utils/graphql/mutations/products";
+import { ProductType } from "@/types/index";
+import Loading from "@/components/Loading";
+
+export async function getServerSideProps(cxt: any) {
+  return {
+    props: {
+      id: cxt.query.id,
+    },
+  };
+}
+
+interface ICategory {
+  value: string;
+  label: string;
+}
 
 const Index = ({ id }: { id: string }) => {
-   const [product, setProduct] = useState<ProductType>({
+  const [options, setOptions] = useState([]);
+  const [product, setProduct] = useState<ProductType>({
     title: "",
-    price: 0,
+    price: null,
     image: "",
     id: "",
     description: "",
     category: { name: "", description: "", id: "" },
     rating: { rate: 0, count: 0 },
-    quantity: 0,
-  });
+    quantity: null  });
+  const { form, formData, updateFormData } = useFormData({});
+  const router = useRouter();
 
-  const [getProduct] = useQuery(GET_PRODUCT,
+  const [getProduct, { loading: loadingLazyquery }] = useLazyQuery(
+    GET_PRODUCT,
     {
       fetchPolicy: "cache-and-network",
       onCompleted: (data) => {
         console.log(data);
         setProduct(data.product);
+
       },
-    });
+    }
+  );
 
-    useEffect(() => {
-      if (id !== "new") getProduct({ variables: { where: { id } } });
-    }, []);
 
+  useEffect(() => {
+    if (id !== "new") getProduct({ variables: { where: { id } } });
+  }, []);
+
+    
+
+  if (loadingLazyquery ) return <Loading />;
   return (
     <div>
       <div>
@@ -45,7 +64,7 @@ const Index = ({ id }: { id: string }) => {
               <img
                 alt="{product.title}"
                 className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-                src={products.image}
+                src={product.image}
               />
               <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                 <label className="text-sm title-font text-gray-500 tracking-widest">
@@ -53,7 +72,7 @@ const Index = ({ id }: { id: string }) => {
                 </label>
 
                 <h2 className="text-white text-3xl title-font font-medium mb-1">
-                  hghghg:{product.title}
+                  {product.title}
                 </h2>
 
                 <div className="flex mb-4">
@@ -114,7 +133,8 @@ const Index = ({ id }: { id: string }) => {
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                     </svg>
                     <span className="text-gray-600 ml-3">
-                      {product.rating.count} Reviews
+                      {/* {product.rating.count}  */}
+                      37 Reviews
                     </span>
                   </span>
                   <span className="flex ml-3 pl-3 py-2 border-l-2 border-gray-200 space-x-2s">
@@ -158,12 +178,7 @@ const Index = ({ id }: { id: string }) => {
                 </div>
                 <p className="leading-relaxed">{product.description}</p>
                 <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
-                  <div className="flex">
-                    <span className="mr-3">Color</span>
-                    <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>
-                    <button className="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
-                    <button className="border-2 border-gray-300 ml-1 bg-indigo-500 rounded-full w-6 h-6 focus:outline-none"></button>
-                  </div>
+                  
                   <div className="flex ml-6 items-center">
                     <span className="mr-3">Size</span>
                     <div className="relative">
@@ -236,5 +251,4 @@ const Index = () => {
   );
 };
 
-export default Index;
- */
+export default Index;*/

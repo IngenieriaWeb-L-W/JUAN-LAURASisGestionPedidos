@@ -79,6 +79,7 @@ const Index = ({ id }: { id: string }) => {
       formdata: formData,
       category: selectedOption,
     });
+    
     await upsertProduct({
       variables: {
         where: {
