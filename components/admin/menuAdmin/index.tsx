@@ -7,12 +7,7 @@ import router from 'next/router';
 
 
 const Index = () =>  {
-
-{/* <Table countProducts={countProducts} /> */}
-//"bg-gray-800 p-40 text-white body-font"
-
-  return (
-    
+return (
     <div className="bg-gray-800"> 
       <section className="text-white body-font">
       <div className="container px-5 py-24 mx-auto">

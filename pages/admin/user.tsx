@@ -30,7 +30,7 @@ const User = () => {
     <div>
       <section className=' p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800'>
         <h2 className='text-lg font-semibold text-gray-700 capitalize dark:text-white'>
-          Account settings Producto : New
+          Configuración de la cuenta : Nueva
         </h2>
 
         <form
@@ -65,7 +65,7 @@ const User = () => {
             </div>
             <div>
               <label className='text-gray-700 dark:text-gray-200' htmlFor='category'>
-                Category
+                Rol
               </label>
               <Select
                 options={Object.values(Role).map((role) => ({ value: role, label: role }))}
@@ -83,14 +83,14 @@ const User = () => {
               onClick={handleSubmit}
               className='px-8 py-2.5 mx-5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600'
             >
-              Save
+              Guardar
             </button>
             <button
               type='button'
               onClick={() => router.push('/admin/inventory')}
               className='px-8 py-2.5 mx-5 leading-5 text-gray-700 transition-colors duration-300 transform bg-white rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600'
             >
-              Cancel
+              Cancelar
             </button>
           </div>
         </form>

@@ -7,6 +7,7 @@ import SessionButtom from '@/components/home/session';
 const Index = () => {
   const router = useRouter();
   const id = 1;
+
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
   const getCart = async () => {
@@ -81,13 +82,7 @@ const Index = () => {
                 >
                   Contacto
                 </Link>
-                <a
-                  onClick={() => router.push(`/product/${id}`)}
-                  href='#'
-                  className='block mx-4 mt-4 text-gray-700 capitalize lg:mt-0 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400'
-                >
-                  UI/UX Designers
-                </a>
+
                 <a
                   onClick={() => router.push(`/admin`)}
                   href='#'
@@ -96,6 +91,27 @@ const Index = () => {
                   Admin
                 </a>
                 <SessionButtom />
+
+                <div>
+                <button onClick={() => router.push(`/checkout`)}>
+                    cart
+                </button>
+                </div>
+
+{/*                   <i
+                    className="iconify w-7 h-7 text-white"
+                    data-icon="marketeq:cart-alt-1">
+                  </i> */}
+                  <div>
+                    <span className="text-white bg-red-800 w-4 h-4 rounded-full">
+                      1{/* {cart.products?.length ?? 0} */}
+                    </span>
+                  </div>
+                  
+                  
+                  
+                
+                
 
               </div>
             </div>

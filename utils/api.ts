@@ -11,7 +11,7 @@ const makePost = (url: string, body: any, options={}as any) => {
   });
 };
 
-const makeJSONPost = async (
+export const makeJSONPost = async (
     url: string,
     data: {
       client_id?: string;
@@ -27,6 +27,8 @@ const makeJSONPost = async (
     headers['Content-Type'] = 'application/json';
 return makePost(url, body, {headers});
   };
+
+
   
   export const getAuth0Token =() => {
     const url = 'https://${domainAuth0}/oauth/token';

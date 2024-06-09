@@ -50,7 +50,7 @@ const Index = ({ product }: ProductTypes, { countProducts }: any) => {
     <div
       key={product.id}
       onClick={() => {
-        router.push(`pages/product/${product.id}`);
+        router.push(`/product/${product.id}`);
       }}
 >
 <section className="text-gray-600 body-font">
