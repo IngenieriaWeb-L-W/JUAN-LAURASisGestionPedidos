@@ -99,10 +99,11 @@ const Index = () => {
                     cart
                   </button>
                 </div>
-                <i
+
+                {/* <i
                   className="iconify w-7 h-7 text-white 'bg-white"
                   data-icon="marketeq:cart-alt-1">
-                </i>
+                </i> */}
                 {/* <div>
                   <span className="text-white w-4 h-4 rounded-full">
                     {cart.products?.length ?? 0}
