@@ -1,6 +1,6 @@
 import React from "react";
 import { useAtom } from "jotai";
-import cartAtom from "@/atoms/cart";
+import {cartAtom} from "@/atoms/cart";
 import useFormData from "@/hooks/useFormData";
 
 const Index = () => {

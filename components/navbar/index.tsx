@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useAtom } from 'jotai';
 import SessionButtom from '@/components/home/session';
+import { cartAtom } from '@/atoms/cart';
 
 const Index = () => {
   const router = useRouter();
@@ -10,10 +11,9 @@ const Index = () => {
 
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
+  // const [cart] = useAtom(cartAtom);
   const getCart = async () => {
-    await fetch('https://fakestoreapi.com/carts/5')
-      .then(async (res) => setCart(await res.json()))
-      .catch((err) => console.log('err', err));
+
   };
   const getProducts = async () => {
     await fetch('https://fakestoreapi.com/products')
@@ -92,26 +92,30 @@ const Index = () => {
                 </a>
                 <SessionButtom />
 
-                <div>
-                <button onClick={() => router.push(`/checkout`)}>
-                    cart
-                </button>
-                </div>
+                <div className='text-white'>
 
-{/*                   <i
-                    className="iconify w-7 h-7 text-white"
-                    data-icon="marketeq:cart-alt-1">
-                  </i> */}
-                  <div>
-                    <span className="text-white bg-red-800 w-4 h-4 rounded-full">
-                      1{/* {cart.products?.length ?? 0} */}
-                    </span>
-                  </div>
-                  
-                  
-                  
-                
-                
+                  <button onClick={() => router.push(`/checkout`)}>
+
+                    cart
+                  </button>
+                </div>
+                <i
+                  className="iconify w-7 h-7 text-white 'bg-white"
+                  data-icon="marketeq:cart-alt-1">
+                </i>
+                {/* <div>
+                  <span className="text-white w-4 h-4 rounded-full">
+                    {cart.products?.length ?? 0}
+                  </span>
+                </div> */}
+                {/* <div className='text-4xl text-white font-bold'>
+                  {cart.length ?? 0}
+                </div> */}
+
+
+
+
+
 
               </div>
             </div>
