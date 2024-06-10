@@ -1,0 +1,35 @@
+import type { GraphQLResolveInfo } from "graphql";
+import { AggregateProductArgs } from "./args/AggregateProductArgs";
+import { CreateManyProductArgs } from "./args/CreateManyProductArgs";
+import { CreateOneProductArgs } from "./args/CreateOneProductArgs";
+import { DeleteManyProductArgs } from "./args/DeleteManyProductArgs";
+import { DeleteOneProductArgs } from "./args/DeleteOneProductArgs";
+import { FindFirstProductArgs } from "./args/FindFirstProductArgs";
+import { FindFirstProductOrThrowArgs } from "./args/FindFirstProductOrThrowArgs";
+import { FindManyProductArgs } from "./args/FindManyProductArgs";
+import { FindUniqueProductArgs } from "./args/FindUniqueProductArgs";
+import { FindUniqueProductOrThrowArgs } from "./args/FindUniqueProductOrThrowArgs";
+import { GroupByProductArgs } from "./args/GroupByProductArgs";
+import { UpdateManyProductArgs } from "./args/UpdateManyProductArgs";
+import { UpdateOneProductArgs } from "./args/UpdateOneProductArgs";
+import { UpsertOneProductArgs } from "./args/UpsertOneProductArgs";
+import { Product } from "../../../models/Product";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateProduct } from "../../outputs/AggregateProduct";
+import { ProductGroupBy } from "../../outputs/ProductGroupBy";
+export declare class ProductCrudResolver {
+    aggregateProduct(ctx: any, info: GraphQLResolveInfo, args: AggregateProductArgs): Promise<AggregateProduct>;
+    createManyProduct(ctx: any, info: GraphQLResolveInfo, args: CreateManyProductArgs): Promise<AffectedRowsOutput>;
+    createOneProduct(ctx: any, info: GraphQLResolveInfo, args: CreateOneProductArgs): Promise<Product>;
+    deleteManyProduct(ctx: any, info: GraphQLResolveInfo, args: DeleteManyProductArgs): Promise<AffectedRowsOutput>;
+    deleteOneProduct(ctx: any, info: GraphQLResolveInfo, args: DeleteOneProductArgs): Promise<Product | null>;
+    findFirstProduct(ctx: any, info: GraphQLResolveInfo, args: FindFirstProductArgs): Promise<Product | null>;
+    findFirstProductOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstProductOrThrowArgs): Promise<Product | null>;
+    products(ctx: any, info: GraphQLResolveInfo, args: FindManyProductArgs): Promise<Product[]>;
+    product(ctx: any, info: GraphQLResolveInfo, args: FindUniqueProductArgs): Promise<Product | null>;
+    getProduct(ctx: any, info: GraphQLResolveInfo, args: FindUniqueProductOrThrowArgs): Promise<Product | null>;
+    groupByProduct(ctx: any, info: GraphQLResolveInfo, args: GroupByProductArgs): Promise<ProductGroupBy[]>;
+    updateManyProduct(ctx: any, info: GraphQLResolveInfo, args: UpdateManyProductArgs): Promise<AffectedRowsOutput>;
+    updateOneProduct(ctx: any, info: GraphQLResolveInfo, args: UpdateOneProductArgs): Promise<Product | null>;
+    upsertOneProduct(ctx: any, info: GraphQLResolveInfo, args: UpsertOneProductArgs): Promise<Product>;
+}
